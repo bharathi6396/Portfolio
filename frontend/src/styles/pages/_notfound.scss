@@ -1,0 +1,48 @@
+.notFound {
+    @include verticalCenter;
+    height: 95vh;
+    max-width: 1200px;
+    background: cadetblue;
+    border-radius: $border-radius;
+    text-align: center;
+  
+    h3 {
+      color: cornsilk;
+      margin-bottom: 3rem;
+      font-size: 2rem;
+      animation: popup .6s ease forwards;
+      transform: scale(0);
+      transform-origin: center;
+    
+      @keyframes popup {
+        to {
+          transform: scale(1);
+        } 
+      } 
+    }
+    
+    h4{
+        margin-bottom: 2rem;
+        font-size: 2rem;
+        color: cornsilk;
+        animation: pushup .6s ease forwards;
+        transform: scale(0);
+        transform-origin: center;
+        @keyframes pushup {
+          to {
+            transform: scale(1);
+          } 
+        } 
+    }
+  
+    a { 
+      padding: 1rem 2rem;
+      border-radius: $border-radius;
+      background: gray;
+      transition: .2s;
+  
+      &:hover {
+        background:white;
+      }
+    }
+}

@@ -1,0 +1,114 @@
+.contactContent {
+    background: cadetblue;
+    border-radius: $border-radius;
+    width: 100%;
+    overflow: hidden;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 20% 45% 35%;
+    grid-template-areas: 
+      "1"
+      "2"
+      "3";
+  
+    .header {
+      grid-area: 1;
+      width: 100%;
+      position: relative;
+      height: 340px;
+    }
+    .contactBox {
+      grid-area: 2;
+      background: yellowgreen;
+      margin: 0 auto;
+      padding: 1rem 3rem;
+      z-index: 2;
+      border-radius: $border-radius;
+      box-shadow: 0 3px 10px #333;
+      width: 50%;
+      min-width: 440px;
+      min-height: 200px;
+  
+      h1 {
+        text-align: center;
+        margin-top: 0.3rem;
+        position: relative;
+        color: cornsilk;
+      }
+      ul {
+        height: 72%;
+        width: inherit;
+        display: grid;
+        margin-top: 3.5rem;
+  
+        li {
+          position: relative;
+        }
+  
+        i {
+          font-size: 1.4rem;
+          position: absolute;
+          transform: translateY(2px);
+          color: black;
+        }
+        span {
+          font-size: 1.4rem;
+          position: absolute;
+          transform: translateX(52px);
+          background: transparent;
+          border: none;
+          outline: none;
+          width: 350px;
+          transition: .2s ease;
+        }
+        .clickInput:hover {
+          transform: translateX(56px);
+          cursor: pointer;
+        }
+      }
+    }
+    .socialNetwork {
+      grid-area: 3;
+      @include verticalCenter;
+  
+      ul {
+        display: flex;
+        text-align: center;
+        width: 100%;
+        justify-content: space-around;
+  
+          i {
+            color:black;
+            margin-top: .3rem;
+          }
+        
+      }
+     
+    }
+    button { 
+        padding: 1rem 2rem;
+        border-radius: $border-radius;
+        // background: gray;
+        transition: .2s;
+        margin-top: 200px;
+        // margin-right: 40px;
+    
+        &:hover {
+          background:orange;
+        }
+      }
+  
+  }
+  @media screen and (max-width: 500px){
+    .contactContent {
+      .contactBox {
+        min-width: 100% !important;
+      }
+      span {
+        font-size: .9rem !important;
+      }
+      h4 {
+        font-size: .9rem;
+      }
+    }
+  }
