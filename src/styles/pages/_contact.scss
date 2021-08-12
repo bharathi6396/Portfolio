@@ -33,7 +33,15 @@
         text-align: center;
         margin-top: 0.3rem;
         position: relative;
-        color: cornsilk;
+        color: cornsilk; 
+        animation: pushup .6s ease forwards;
+        transform: scale(0);
+        transform-origin: center;
+        @keyframes pushup {
+          to {
+            transform: scale(1);
+          } 
+        } 
       }
       ul {
         height: 72%;
